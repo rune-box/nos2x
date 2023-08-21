@@ -8,6 +8,7 @@ esbuild
   .build({
     bundle: true,
     entryPoints: {
+      'nervos.build': './extension/nervos.js',
       'popup.build': './extension/popup.jsx',
       'prompt.build': './extension/prompt.jsx',
       'options.build': './extension/options.jsx',

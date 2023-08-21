@@ -1,0 +1,16 @@
+private key:
+0xb6c51b92e81f407bb5f46b0b63251da43d175a5459b299ac4e3d0001ea4dbcbc
+
+public key: 
+0x02dfe64d3601a5a39acbf44304e95e13934ed3c728a41bd4490cb9e647d8667d5d
+
+blake160(public key):
+0x1d35b82af8682c5b6a5993890f70d78f2caff3d8
+
+ckb address (ACP):
+mainnet:
+ckb1qrfkjktl73ljn77q637judm4xux3y59c29qvvu8ywx90wy5c8g34gqgaxkuz47rg93dk5kvn3y8hp4u09jhl8kqplpvpj
+testnet:
+ckt1qq6pngwqn6e9vlm92th84rk0l4jp2h8lurchjmnwv8kq3rt5psf4vqgaxkuz47rg93dk5kvn3y8hp4u09jhl8kqv3vvae
+
+> Check on [](https://ckb.tools/generator)

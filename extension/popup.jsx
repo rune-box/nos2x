@@ -3,10 +3,13 @@ import {render} from 'react-dom'
 import {getPublicKey, nip19} from 'nostr-tools'
 import React, {useState, useRef, useEffect} from 'react'
 import QRCode from 'react-qr-code'
+import { getCkbAddress } from './nervos'//, privateToPublic, publicKeyToBlake160
 
 function Popup() {
   let [pubKey, setPubKey] = useState('')
   let keys = useRef([])
+
+  const [ckbAddress, setCkbAddress] = useState('')
 
   useEffect(() => {
     browser.storage.local.get(['private_key', 'relays']).then(results => {
@@ -18,6 +21,10 @@ function Popup() {
 
         keys.current.push(npubKey)
         keys.current.push(hexKey)
+
+        // results.private_key is a hex with length 64, no '0x' prefix
+        const ckb_addr = getCkbAddress(`0x${results.private_key}`);
+        setCkbAddress(ckb_addr);
 
         if (results.relays) {
           let relaysList = []
@@ -62,7 +69,6 @@ function Popup() {
           >
             <code>{pubKey}</code>
           </pre>
-
           <div
             style={{
               height: 'auto',
@@ -75,6 +81,32 @@ function Popup() {
               size={256}
               style={{height: 'auto', maxWidth: '100%', width: '100%'}}
               value={pubKey.startsWith('n') ? pubKey.toUpperCase() : pubKey}
+              viewBox={`0 0 256 256`}
+            />
+          </div>
+
+          <p>Nervos CKB:</p>
+          <pre
+            style={{
+              whiteSpace: 'pre-wrap',
+              wordBreak: 'break-all',
+              width: '200px'
+            }}
+          >
+            <code>{ckbAddress}</code>
+          </pre>
+          <div
+            style={{
+              height: 'auto',
+              margin: '0 auto',
+              maxWidth: 256,
+              width: '100%'
+            }}
+          >
+            <QRCode
+              size={256}
+              style={{height: 'auto', maxWidth: '100%', width: '100%'}}
+              value={ckbAddress}
               viewBox={`0 0 256 256`}
             />
           </div>

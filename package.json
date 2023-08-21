@@ -1,7 +1,11 @@
 {
   "license": "WTFPL",
   "dependencies": {
+    "@ckb-lumos/config-manager": "^0.20.0",
+    "@ckb-lumos/helpers": "^0.20.0",
     "async-mutex": "^0.3.2",
+    "buffer": "^6.0.3",
+    "elliptic": "^6.5.4",
     "esbuild": "^0.14.11",
     "eslint": "^8.6.0",
     "eslint-plugin-babel": "^5.3.1",
