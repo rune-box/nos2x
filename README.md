@@ -44,6 +44,14 @@ then
 3. click on "Load unpackaged";
 4. select the `extension/` folder of this repository.
 
+## Support [Nervos CKB](https://www.nervos.org/)
+Core logic, see `extension/nervos.js`  
+* ✅ getCkbAddress(privateKey): private key to AnyoneCanPay address with strict minimal 1 CKB
+* 📅 transfer
+
+UI:
+* ✅ display Nervos CKB address
+
 ---
 
 LICENSE: public domain.
