@@ -8,9 +8,12 @@ blake160(public key):
 0x1d35b82af8682c5b6a5993890f70d78f2caff3d8
 
 ckb address (ACP):
-mainnet:
-ckb1qrfkjktl73ljn77q637judm4xux3y59c29qvvu8ywx90wy5c8g34gqgaxkuz47rg93dk5kvn3y8hp4u09jhl8kqplpvpj
 testnet:
 ckt1qq6pngwqn6e9vlm92th84rk0l4jp2h8lurchjmnwv8kq3rt5psf4vqgaxkuz47rg93dk5kvn3y8hp4u09jhl8kqv3vvae
+mainnet:
+// no minimal requirement
+ckb1qrfkjktl73ljn77q637judm4xux3y59c29qvvu8ywx90wy5c8g34gqgaxkuz47rg93dk5kvn3y8hp4u09jhl8kqplpvpj
+// minimal ckb: 1 ckb
+ckb1qrfkjktl73ljn77q637judm4xux3y59c29qvvu8ywx90wy5c8g34gqgaxkuz47rg93dk5kvn3y8hp4u09jhl8kqgjj76sh
 
 > Check on [](https://ckb.tools/generator)
