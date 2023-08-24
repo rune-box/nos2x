@@ -63,10 +63,16 @@ export function getCkbAddress(privateKey) {
 
     // ref: https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0026-anyone-can-pay/0026-anyone-can-pay.md#script-structure
     // 08: minimal transfer = 1 CKB
+    // const script = {
+    //     codeHash: config.SCRIPTS.ANYONE_CAN_PAY.CODE_HASH,
+    //     hashType: "type",
+    //     args: `${blake160}08`,
+    // };
+
     const script = {
-        codeHash: config.SCRIPTS.ANYONE_CAN_PAY.CODE_HASH,
+        codeHash: config.SCRIPTS.SECP256K1_BLAKE160.CODE_HASH,
         hashType: "type",
-        args: `${blake160}08`,
+        args: blake160,
     };
     const addr = encodeToAddress(script, config);
     return addr;
